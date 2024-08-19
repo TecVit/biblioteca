@@ -1,0 +1,107 @@
+.container-error404 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: var(--slateNine);
+}
+
+.content-error404 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.content-error404 .left {
+    width: max-content;
+    height: auto;
+    padding: 0px;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    margin: 0px;
+}
+
+.content-error404 .left img {
+    width: max-content;
+    max-width: 400px;
+    height: auto;
+}
+
+.content-error404 .right {
+    width: 85%;
+    max-width: 425px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--slateTen);
+    margin: auto 0px auto 10px;
+}
+
+.content-error404 .right .logo {
+    width: 180px;
+    height: auto;
+    margin: -50px -20px -50px -20px;
+    user-select: none;
+}
+
+.content-error404 .right h1 {
+    font-size: 72.5px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: var(--three);
+    margin: 0px 0px 10px 0px;
+}
+
+.content-error404 .right h2 {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0px 0px 35px 0px;
+}
+
+.content-error404 .right h3 {
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: var(--greenLight);
+}
+
+.content-error404 .right p {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: var(--slateEight);
+    margin: 10px 0px 20px 0px;
+}
+
+.content-error404 .right button {
+    width: max-content;
+    height: max-content;
+    padding: 12.5px 25px;
+    border-radius: 6px;
+    color: var(--slateTen);
+    background: var(--primary);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    transition: all .1s ease-in-out;
+} .content-error404 .right button:hover,
+.content-error404 .right button:focus {
+    background: transparent;
+    box-shadow: 0 0 10px var(--primary);
+    color: var(--primary);
+}

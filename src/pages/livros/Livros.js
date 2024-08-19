@@ -16,12 +16,44 @@ import Popup from '../../components/Popup';
 import { MdClass, MdOutlineDriveFileRenameOutline } from 'react-icons/md';
 import { GrStatusGoodSmall } from 'react-icons/gr';
 import { NotificationContainer, notifyError, notifySuccess } from '../../toastifyServer';
+import { clearCookies, getCookie } from '../../firebase/cookies';
+import { auth } from '../../firebase/logar';
 
 // Status dos livros
 // 0 => Livre
 // 1 => Ocupado
 
 export default function Listar() {
+
+  // Validar Credenciais
+  const uidLocal = getCookie('uid') || null;
+  const nomeLocal = getCookie('nome') || null;
+  const emailLocal = getCookie('email') || null;
+
+  useEffect(() => {
+    const verificarLogin = async  () => {
+      try {
+        auth.onAuthStateChanged( async function(user) {
+          if (!user) {
+            localStorage.clear();
+            clearCookies();
+            window.location.href = "/entrar";
+          } else {
+            if (!nomeLocal || !uidLocal || !emailLocal || uidLocal !== user.uid) {
+              localStorage.clear();
+              clearCookies();
+              window.location.href = "/entrar";
+            }
+            return true;
+          }
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    verificarLogin();
+  }, []);
+  
 
   // Animações
   function getTopPositionRelativeToPage(element) {
@@ -297,8 +329,8 @@ export default function Listar() {
   return (
     <>
       <NotificationContainer />
-      <section className='container-livros'>
-        <div className='content-livros'>
+      <main className='container-livros'>
+        <section className='content-livros'>
           
           <div data-animation="top" data-duration-animation="0.6s" className='top'>
             <h1>Livros</h1>
@@ -390,8 +422,8 @@ export default function Listar() {
             <p>Precisa de ajuda? Entre em contato com o aluno: <strong>Vitor do 1ºB</strong></p>
           </div>
           
-        </div>
-      </section>
+        </section>
+      </main>
 
 
       {/* Popups */}

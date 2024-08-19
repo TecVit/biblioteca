@@ -7,6 +7,7 @@ import Menu from './components/Menu';
 // Pages
 import Entrar from './pages/logar/Entrar';
 import Livros from './pages/livros/Livros';
+import Error404 from './pages/errors/404';
 
 // Toastify
 import { notifySuccess, notifyError, NotificationContainer } from './toastifyServer';
@@ -28,10 +29,11 @@ const RouterApp = () => {
               
               {/* Livros */}
               <Route path="/livros" element={<Livros />} />
-              <Route path="/" element={<div>Home</div>} />
+              <Route path="/*" element={<Error404 />} />
             </Routes>
           </div>
         } />
+        <Route path="/*" element={<Error404 />} />
       </Routes>
     </Router>
   );
