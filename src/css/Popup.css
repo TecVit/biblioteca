@@ -1,0 +1,210 @@
+.container-popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(23, 31, 49, 0.9);
+    color: var(--slateNine);
+    z-index: 999;
+    padding: 0px 0px 0px 0px;
+} .container-popup *::selection {
+    background: var(--slateNine);
+    color: var(--slateFour);
+}
+
+.container-popup .content-popup {
+    width: 95%;
+    max-width: 840px;
+    height: 85%;
+    max-height: 880px;
+    overflow-y: scroll;
+    background: var(--slateThree);
+    color: var(--slateNine);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: var(--boxShadow);
+    border: 2px solid var(--slateFour);
+    padding: 0px 0px 0px 0px;
+}
+
+/* Top */
+.container-popup .content-popup .top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: var(--slateFour);
+    color: var(--slateNine);
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: var(--boxShadowGray);
+}
+
+.container-popup .content-popup .top .icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    padding: 4px 4px 4px 4px;
+    border-radius: 12px;
+    transition: all .1s ease-in-out;
+} .container-popup .content-popup .top .icon:hover {
+    background: var(--slateThree);
+    color: var(--slateNine);
+}
+
+.container-popup .content-popup .top h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container-popup .content-popup .informacoes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container-popup .content-popup .informacoes li {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.container-popup .content-popup .informacoes li .icon {
+    font-size: 25px;
+    margin: 0px 8px 0px 0px;
+} .container-popup .content-popup .informacoes li .icon.livre {
+    color: var(--greenLight);
+} .container-popup .content-popup .informacoes li .icon.ocupado {
+    color: var(--red);
+}
+
+.container-popup .content-popup .informacoes li h1 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.container-popup .content-popup .informacoes button {
+    width: max-content;
+    height: max-content;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 550;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+    background: var(--slateFour);
+    color: var(--slateNine);
+    transition: all .1s ease-in-out;
+} .container-popup .content-popup .informacoes button:hover,
+.container-popup .content-popup .informacoes button:focus {
+    box-shadow: 0px 5px 15px var(--slateFour);
+}
+
+.container-popup .content-popup .informacoes .liberar {
+    background: var(--greenLight);
+    color: var(--slateFour);
+    font-weight: 600;
+} .container-popup .content-popup .informacoes .liberar:hover,
+.container-popup .content-popup .informacoes .liberar:focus {
+    box-shadow: 0px 5px 15px var(--greenLight);
+}
+
+.container-popup .content-popup .informacoes .excluir {
+    background: var(--red);
+    color: var(--slateNine);
+    font-weight: 600;
+} .container-popup .content-popup .informacoes .excluir:hover,
+.container-popup .content-popup .informacoes .excluir:focus {
+    box-shadow: 0px 5px 15px var(--red);
+}
+
+/* Formulário */
+.container-popup .content-popup .form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    margin: 0px auto;
+}
+
+
+.container-popup .content-popup .form .input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 22.5px 0px;
+}
+
+.container-popup .content-popup .form .input label {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px 0px 10px 2px;
+}
+
+.container-popup .content-popup .form .input input {
+    width: 100%;
+    height: 47.5px;
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    background: var(--slateThree);
+    color: var(--slateTen);
+    transition: all .1s ease-in-out;
+    border: 1px solid var(--slateEight);
+} .container-popup .content-popup .form .input input:focus {
+    border: 1px solid var(--slateNine);
+    box-shadow: 0px 5px 20px var(--primary);
+}
+
+.container-popup .content-popup .form .input select {
+    width: 100%;
+    height: 47.5px;
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 15px;
+    background: var(--slateThree);
+    color: var(--slateTen);
+    transition: all .1s ease-in-out;
+    border: 1px solid var(--slateEight);
+    cursor: pointer;
+} .container-popup .content-popup .form .input select:focus {
+    border: 1px solid var(--slateNine);
+    box-shadow: 0px 5px 20px var(--primary);
+}
+
+.container-popup .content-popup .form button {
+    width: 100%;
+    height: 55px;
+    margin: 5px 0px;
+    background: var(--primary);
+    color: var(--slateTen);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+} .container-popup .content-popup .form button:hover,
+.container-popup .content-popup .form button:focus {
+    background: transparent;
+    color: var(--primary);
+    box-shadow: 0px 5px 15px var(--primary);
+}

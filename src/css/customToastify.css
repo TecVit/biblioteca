@@ -1,0 +1,56 @@
+/* custom-toast.css */
+
+.Toastify__toast-container {
+    margin-top: 5px !important;
+}
+
+.Toastify__toast {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.3px !important;
+    padding-bottom: 12.5px !important;
+    font-weight: 600 !important;
+    color: var(--slateTwo) !important;
+    background-color: var(--slateNine) !important;
+}
+  
+.Toastify__toast--success {
+    background-color: var(--slateNine) !important;
+}
+  
+.Toastify__toast--error {
+    background-color: var(--slateNine) !important;
+}
+  
+.Toastify__toast-body {
+    font-family: Arial, sans-serif !important;
+}
+  
+.Toastify__close-button {
+    color: var(--five) !important;
+}
+
+/* BARRA DE PROGRESSO */
+.Toastify__progress-bar {
+    background: var(--dark) !important; /* Exemplo: verde */
+    opacity: 1 !important;
+}
+  
+.Toastify__toast--success .Toastify__progress-bar {
+    background: #3cac40 !important; /* Verde */
+}
+
+.Toastify__toast--error .Toastify__progress-bar {
+    background: #f44336 !important; /* Vermelho */
+}
+
+/* ICONES */
+.Toastify__toast--success .Toastify__toast-icon {
+    width: 20px !important;
+    color: #3cac40 !important;
+}
+  
+.Toastify__toast--error .Toastify__toast-icon {
+    width: 20px !important;
+    color: #f44336 !important; /* Exemplo: vermelho para erro */
+}

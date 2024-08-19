@@ -1,0 +1,120 @@
+.container-menu {
+    width: max-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-menu {
+    width: max-content;
+    height: 100%;
+    min-height: 100vh;
+    background: var(--slateThree);
+    color: var(--slateSeven);
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+}
+
+.content-menu .logo {
+    width: 50px;
+    height: max-content;
+    margin: 5px 0px 15px -2px;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 2px;
+    transition: all .1s ease-in-out;
+} .content-menu .logo:hover {
+    background: var(--slateFour);
+}
+
+/* BTNS */
+.content-menu .btns {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    border-right: 1px solid var(--slateSix);
+}
+
+.content-menu .btns .btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--slateSeven);
+    padding: 12.5px 0px;
+    cursor: pointer;
+    border-left: 2px solid var(--slateThree);
+    transition: all .1s ease-in-out;
+} .content-menu .btns .btn:hover,
+.content-menu .btns .btn:focus {
+    background: var(--slateFour);
+    border-left: 2px solid var(--slateFour);
+    color: var(--slateTen);
+} .content-menu .btns .btn.selecionado {
+    border-left: 2px solid var(--slateTen);
+    color: var(--slateTen);
+}
+
+.content-menu .btns .btn .icon {
+    font-size: 27.5px;
+    cursor: pointer;
+}
+
+
+/* LINKS */
+.content-menu .links {
+    width: max-content;
+    min-width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22.5px 0px;
+    color: var(--slateTen);
+    border-right: 1px solid var(--slateSix);
+}
+
+.content-menu .links h1 {
+    width: 80%;
+    height: auto;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0px 15px 0px;
+}
+
+.content-menu .links button {
+    width: 85%;
+    height: max-content;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--slateEight);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    padding: 8.5px 3.5%;
+    margin: 2px 0px;
+    transition: all .1s ease-in-out;
+} .content-menu .links button:hover,
+.content-menu .links button:focus {
+    background: var(--slateFour);
+    color: var(--slateEleven);
+} .content-menu .links button.selecionado {
+    background: var(--slateFour);
+    color: var(--slateEleven);
+}
+
+.content-menu .links button .icon {
+    font-size: 20px;
+    margin: 0px 8px 0px 0px;
+}

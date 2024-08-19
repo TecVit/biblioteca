@@ -1,0 +1,262 @@
+.container-livros {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.content-livros {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.content-livros .top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 20px 0px;
+}
+
+.content-livros .top h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0px 15px 0px 0px;
+}
+
+.content-livros .top .input-pesquisar {
+    width: 65%;
+    max-width: 400px;
+    height: auto;
+    margin: 0px 0px 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.content-livros .top .input-pesquisar input {
+    width: 100%;
+    height: 45px;
+    padding: 0px 18px 0px 36px;
+    border-radius: 12px;
+    background: var(--slateThree);
+    color: var(--slateSeven);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 0px 0px auto;
+    border: 1px solid var(--slateSix);
+    transition: all .1s ease-in-out;
+} .content-livros .top .input-pesquisar input:focus {
+    box-shadow: 0px 5px 15px var(--primary);
+}
+
+.content-livros .top .input-pesquisar .icon {
+    position: absolute;
+    left: 12.5px;
+    top: 50%;
+    color: var(--slateSeven);
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.content-livros .top button {
+    width: 150px;
+    min-width: 150px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: var(--slateNine);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    margin: 0px 0px 0px 15px;
+    transition: all .1s ease-in-out;
+} .content-livros .top button:hover,
+.content-livros .top button:focus {
+    box-shadow: 0px 5px 20px var(--primary);
+}
+
+
+
+/* Tabela */
+.content-livros .tabela {
+    width: 100%;
+    height: auto;
+    background: var(--slateThree);
+    border-radius: 12px;
+    border: 1px solid var(--slateSix);
+    margin: 15px 0px;
+}
+
+/* Título */
+.content-livros .tabela .titulo {
+    background: var(--slateFour);
+    color: var(--slateTen);
+    border-radius: 12px 12px 0px 0px;
+    padding: 15px;
+    border-bottom: 1px solid var(--slateSix);
+}
+
+.content-livros .tabela .titulo h1 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+} .content-livros .tabela .titulo h1 .icon {
+    font-size: 24px;
+    margin: 0px 8px 0px 0px;
+}
+
+
+/* Linhas */
+.content-livros .tabela .linha {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16.5px 15px;
+    border-bottom: 1px solid var(--slateSix);
+} .content-livros .tabela .linha:last-child {
+    border-bottom: none;
+}
+
+.content-livros .tabela .linha .status {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    margin: 0px 12.5px 0px 0px;
+} .content-livros .tabela .linha .status.livre {
+    background: var(--greenLight);
+} .content-livros .tabela .linha .status.ocupado {
+    background: var(--red);
+}
+
+
+
+
+.content-livros .tabela .linha h1 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: var(--slateNine);
+    display: flex;
+    align-items: center;
+    margin: 0px 12.5px 0px 0px;
+} .content-livros .tabela .linha h1 strong {
+    color: var(--green);
+}
+
+.content-livros .tabela .linha .info {
+    font-size: 35px;
+    padding: 6px 0px;
+    border-radius: 8px;
+    background: var(--slateFour);
+    margin: 0px 0px 0px auto;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+} .content-livros .tabela .linha .info:hover {
+    background: var(--slateFive);
+    box-shadow: 0px 5px 15px var(--slateFive);
+}
+
+/* Paginação */
+.content-livros .paginacao {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: var(--slateThree);
+    border: 1px solid var(--slateSix);
+    border-radius: 12px;
+    margin: 10px auto;
+    overflow-x: hidden;
+}
+
+.content-livros .paginacao button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: var(--slateNine);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+} .content-livros .paginacao button:focus,
+.content-livros .paginacao button:hover {
+    background: var(--slateFour);
+} .content-livros .paginacao button.ativo {
+    background: var(--slateFour);
+}
+
+.content-livros .paginacao a {
+    width: auto;
+    height: 50px;
+    background: transparent;
+    color: var(--slateNine);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin: auto 0px;
+} .content-livros .paginacao a:focus,
+.content-livros .paginacao a:hover {
+    background: var(--slateFour);
+} .content-livros .paginacao a.ativo {
+    background: var(--slateFour);
+}
+
+
+
+/* Ajuda */
+.content-livros .ajuda {
+    width: max-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--slateThree);
+    padding: 12.5px;
+    border-radius: 12px;
+    border: 1px solid var(--slateSix);
+    margin: 15px auto 0px auto;
+}
+
+.content-livros .ajuda .icon {
+    font-size: 22px;
+    color: var(--slateSix);
+    margin: 0px 8px 0px 0px;
+}
+
+.content-livros .ajuda p {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+} .content-livros .ajuda p strong {
+    background: var(--slateFive);
+    color: var(--slateEight);
+    font-size: 15px;
+    font-weight: 650;
+    padding: 5px 8.5px;
+    border-radius: 8px;
+    margin: 0px 0px 0px 4px;
+}

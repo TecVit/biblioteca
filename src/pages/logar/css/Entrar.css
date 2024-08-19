@@ -1,0 +1,167 @@
+.container-entrar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-entrar .content-entrar {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0px;
+}
+
+/* Formulário */
+.content-entrar .form {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    margin: 0px auto;
+    z-index: 10;
+}
+
+
+.content-entrar .form .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    user-select: none;
+    border-radius: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+.content-entrar .form .logo img {
+    width: 80px;
+    height: auto;
+    margin: 0px 12px 0px 0px;
+}
+
+.content-entrar .form .logo h2 {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    color: var(--slateEight);
+} .content-entrar .form .logo h2 .blue {
+    color: #47c6e1;
+    font-weight: 900;
+} .content-entrar .form .logo h2 .red {
+    color: #ea5167;
+    font-weight: 900;
+}
+
+
+.content-entrar .form h1 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0px 0px 25px 0px;
+    text-align: center;
+}
+
+.content-entrar .form .input {
+    width: 92.5%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 22.5px 0px;
+}
+
+.content-entrar .form .input label {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px 0px 6px 3px;
+}
+
+.content-entrar .form .input input {
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 15px;
+    background: var(--slateThree);
+    color: var(--slateTen);
+    transition: all .1s ease-in-out;
+    border: 1px solid var(--slateSix);
+} .content-entrar .form .input input:focus {
+    border: 1px solid var(--primary);
+    box-shadow: 0px 5px 20px var(--primary);
+}
+
+
+.content-entrar .form button {
+    width: 92.5%;
+    height: 55px;
+    border-radius: 14px;
+    font-size: 17px;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--slateTen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5px 0px;
+    transition: all .1s ease-in-out;
+} .content-entrar .form button:focus,
+.content-entrar .form button:hover {
+    background: transparent;
+    color: var(--primary);
+    box-shadow: 0px 5px 20px var(--primary);
+}
+
+.content-entrar .form button .icon {
+    margin: 2px 0px 0px 8px;
+    font-size: 17px;
+}
+
+
+/* Creditos */
+.creditos {
+    width: calc(90% - 30px);
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.creditos p {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6.5px 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    text-align: center;
+} .creditos p strong {
+    font-size: 16.5px;
+    font-weight: 900;
+    color: var(--blue);
+    cursor: pointer;
+    user-select: none;
+    transition: all .1s ease-in-out;
+} .creditos p strong:hover {
+    text-shadow: 0px 2.5px 10px var(--primary);
+}

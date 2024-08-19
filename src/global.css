@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --primary: #5b3997;
+  
+  --slateOne: #020617;
+  --slateTwo: #171f31;
+  --slateThree: #1e293b;
+  --slateFour: #334155;
+  --slateFive: #475569;
+  --slateSix: #64748b;
+  --slateSeven: #94a3b8;
+  --slateEight:#cbd5e1;
+  --slateNine: #e2e8f0;
+  --slateTen: #f1f5f9;
+  --slateEleven: #f8fafc;
+
+  --blue: #71b3d6;
+  --yellow: #ffa800;
+  --green: #1dbd1d;
+  --greenLight: #04d361;
+  --red: #F55557;
+  --orange: #ff6400;
+  --grayMicrosoft: #2c2c2e;
+  --white: #ffffff;
+  --firebase: #f5820d;
+ 
+  --boxShadow: 0 1px 2px 0 rgba(0,0,0,.12);
+  --boxShadowGray: 0 1px 0 0 rgba(0,4,17,.07),0 0 24px 0 rgba(0,4,17,.15);
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--slateTwo);
+  color: var(--slateTen);
+}
+
+.painel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+/* ALERTA MODIFICADO */
+.swal-modal {
+  background-color: var(--slateThree);
+  border: 3px solid var(--slateNine);
+  border-radius: 10px;
+}
+
+.swal-title {
+  width: 95%;
+  height: 100%;
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--slateNine);
+  letter-spacing: 0.5px;
+  margin: 0px auto;
+}
+
+.swal-text {
+  width: 85%;
+  margin: 0px auto;
+  padding: 0px;
+  color: var(--slateNine);
+  font-size: 16px;
+  letter-spacing: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.swal-content {
+  width: 85%;
+  max-width: 85%;
+  margin: 25px auto 0px auto;
+  padding: 0px;
+}
+
+.swal-button {
+  background-color: var(--slateNine);
+  color: var(--slateThree);
+} .swal-button--confirm {
+  background-color: var(--slateNine);
+  color: var(--slateThree);
+} .swal-button--cancel {
+  background-color: var(--red);
+  color: white;
+}
+
+.swal-icon::before, .swal-icon::after {
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+}
+
+.swal-icon--success__hide-corners {
+  background: transparent !important;
+}
+
+.swal-icon--warning {
+  border-color: var(--red) !important;
+  
+}
+.swal-icon--warning__body, .swal-icon--warning__dot {
+  background-color: var(--red) !important;
+}
+
+.swal-content__input {
+  height: 45px;
+  padding: 0px 15px;
+  border-radius: 8px !important;
+  color: var(--slateThree);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+/* Animações */
+
+*[data-animation] {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+*[data-animation="top"] {
+  transform: translateY(170px);
+}
+
+*[data-animation="right"] {
+  transform: translateX(-170px);
+}
+
+*[data-animation="bottom"] {
+  transform: translateY(-170px);
+}
+
+*[data-animation="left"] {
+  transform: translateX(170px);
+}
+
+*.animationClass {
+  transform: translate(0px) !important;
+  opacity: 1 !important;
+}
