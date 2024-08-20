@@ -141,12 +141,15 @@ export const setStudentBook = async (dados) => {
             const data = docSnapshot.data();
             let livros = data.livros || [];
 
+            // ATENÇÂO => Ao adicionar novos campos de dados nos livros,
+            // Criar uma nova linha do campo nesse objeto retornado
             livros = livros.map(livro => {
                 if (livro.uid === uid) {
                     return { 
                         nome: livro.nome,
                         uid: livro.uid,
                         status: 'ocupado',
+                        categoria: livro.categoria,
                         turma_aluno: turma,
                         aluno_responsavel: aluno,
                         data_coleta: data_coleta,
