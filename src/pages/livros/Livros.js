@@ -419,7 +419,7 @@ export default function Listar() {
 
           <div data-animation="top" data-duration-animation="0.9s" className='ajuda'>
             <IoMdHelpCircle className='icon' />
-            <p>Precisa de ajuda? Entre em contato com o aluno: <strong>Vitor do 1ºB</strong></p>
+            <p>Precisa de ajuda? Entre em contato com o aluno: <strong onClick={() => window.open('https://wa.me/5516997569308')}>Vitor do 1ºB</strong></p>
           </div>
           
         </section>

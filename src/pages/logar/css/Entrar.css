@@ -67,10 +67,10 @@
 
 
 .content-entrar .form h1 {
-    width: 100%;
+    width: 92.5%;
     font-size: 38px;
     font-weight: 800;
-    margin: 0px 0px 25px 0px;
+    margin: 0px auto 25px auto;
 }
 
 .content-entrar .form .input {
