@@ -52,6 +52,11 @@ body {
   color: var(--slateTen);
 }
 
+input::placeholder {
+  color: var(--slateNine);
+  opacity: 0.9;
+}
+
 .painel {
   width: 100%;
   height: auto;
