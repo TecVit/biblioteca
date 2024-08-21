@@ -163,7 +163,7 @@ export default function Listar() {
   // Livros
   const [paginaAtual, setPaginaAtual] = useState(1);
   const [mostrarTodos, setMostrarTodos] = useState(false);
-  const livrosPorPagina = 6;
+  const livrosPorPagina = 10;
 
   const indexUltimoLivro = paginaAtual * livrosPorPagina;
   const indexPrimeiroLivro = indexUltimoLivro - livrosPorPagina;
@@ -440,7 +440,7 @@ export default function Listar() {
             </li>
             <li>
             <TbCategoryFilled className='icon' />
-              <h1>Categoria: <strong>{infoLivro.categoria}</strong></h1>
+              <h1>Categoria: <strong>{infoLivro.categoria ? infoLivro.categoria : 'Indefinida'}</strong></h1>
             </li>
             {infoLivro.status === 'ocupado' && (
               <>

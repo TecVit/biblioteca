@@ -176,7 +176,6 @@ export const setStudentBook = async (dados) => {
 export const createBook = async (dados) => {
     const { nome, categoria } = dados;
     const uuid = uuidv4();
-    console.log(uuid);
     try {
         const booksDoc = firestore.collection('privado').doc('livros');
         const docSnapshot = await booksDoc.get();
@@ -229,4 +228,50 @@ export const deleteBook = async (dados) => {
       console.log('Erro ao excluir o livro:', error);
       return false;
     }
-  };
+};
+
+function capitalizeText(text) {
+    return text
+      .split(' ')
+      .map(word => {
+        // Verifica se o primeiro caractere é uma letra
+        if (word.charAt(0).match(/[a-zA-Z]/)) {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        // Se não for uma letra, retorna a palavra como está
+        return word;
+      })
+      .join(' ');
+}
+
+
+/*
+
+// Função para atualizar os livros que os gremistas não querem atualizar manualmente.. TUDO EU ;(
+const atualizarLivros = async () => {
+    try {
+        const livros = [];
+        const atualizando = await Promise.all(livros.map((val, index) => {
+            let uuid = uuidv4();
+            return {
+                nome: capitalizeText(String(val.nome)),
+                categoria: null,
+                status: 'livre',
+                uid: uuid,
+            }
+        })) ;
+        if (atualizando) {
+            await firestore.collection('privado')
+            .doc('livros').set({
+                livros: atualizando,
+            }, { merge: true });
+        }   
+    } catch (error) {
+        console.log(error);
+        return;
+    }
+}
+
+atualizarLivros();
+
+*/
